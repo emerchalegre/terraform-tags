@@ -15,5 +15,4 @@ jobs:
         id: fmt
         run: terraform fmt -check
       - name: Terraform Lint
-        uses: terraform-linters/tflint@v0.25.0
-        run: hashicorp/terraform:0.12.29
+        uses: terraform-linters/setup-tflint@v1.0.7
