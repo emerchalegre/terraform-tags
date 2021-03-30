@@ -1,0 +1,19 @@
+name: 'Terraform'
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  terraform:
+    name: 'Terraform'
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Setup - Checkout"
+        uses: actions/checkout@v2.1.0
+      - name: Terraform Format
+        id: fmt
+        run: terraform fmt -check
+      - name: Terraform Lint
+        uses: terraform-linters/tflint@v0.25.0
+        run: hashicorp/terraform:0.12.29
