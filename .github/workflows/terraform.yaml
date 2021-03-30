@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: "Setup - Checkout"
         uses: actions/checkout@v2.1.0
+      - name: "HashiCorp - Setup Terraform"
+        uses: hashicorp/setup-terraform@v1.2.1
       - name: Terraform Format
         id: fmt
         run: terraform fmt -check
