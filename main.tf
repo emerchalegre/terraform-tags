@@ -1,9 +1,9 @@
 locals {
   common_tags = {
-    VS = var.vs
+    VS          = var.vs
     Environment = var.environment
-    Squad = var.squad
-    Product = var.product
+    Squad       = var.squad
+    Product     = var.product
   }
 
   other_tags = var.tags

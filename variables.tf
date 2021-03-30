@@ -17,8 +17,8 @@ variable "environment" {
 }
 
 variable "product" {
-  type = string
-  default = ""
+  type        = string
+  default     = ""
   description = "Name of the Product"
 }
 
